@@ -8,12 +8,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import { Container, Drawer } from '@material-ui/core';
+import { Container, Drawer, Typography } from '@material-ui/core';
 import PersistentDrawerLeft from './components/PersistentDrawerLeft';
 
 function App() {
   return (
-    <PersistentDrawerLeft />
+    <PersistentDrawerLeft >
+    </PersistentDrawerLeft>
     
   );
 }
