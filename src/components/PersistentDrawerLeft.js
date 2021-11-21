@@ -19,6 +19,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Card, CardMedia, CardContent, CardActions, Button, Container } from '@mui/material';
 
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -167,7 +168,7 @@ export default function PersistentDrawerLeft() {
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="./img/vikings.jpg"
           alt="green iguana"
         />
         <CardContent>
