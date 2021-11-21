@@ -1,6 +1,8 @@
-# Co
+# Consumindo a API de Dados Abertos da Camara dos Deputados.
 
-## Available Scripts
+- Este projeto tem por objetivo apresentar de forma mais simples e direta como o dinheiro público é gasto pelo deputados em exercício.
+
+## Scripts disponíveis
 
 Para rodar use o comando:
 
