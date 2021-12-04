@@ -17,7 +17,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import GroupsIcon from '@mui/icons-material/Groups';
+import InfoIcon from '@mui/icons-material/Info';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 import { Card, CardMedia, CardContent, CardActions, Button, Container } from '@mui/material';
+import Groups from '@mui/icons-material/Groups';
 
 
 const drawerWidth = 240;
@@ -67,7 +72,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+export default function PersistentDrawerLeft({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -78,6 +83,29 @@ export default function PersistentDrawerLeft() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const menuItems = [
+    {
+      text: 'Home',
+      icon: <HomeIcon />,
+      path: '/'
+    },
+    {
+      text: 'Deputados',
+      icon: <GroupsIcon />,
+      path: '/deputados'
+    },
+    {
+      text: 'Sobre',
+      icon: <InfoIcon />,
+      path: '/about'
+    },
+    {
+      text: 'Contato',
+      icon: <ContactPageIcon />,
+      path: '/contact'
+    }
+  ]
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -94,7 +122,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Dados Abertos da Câmara dos Deputados
+            API Dados Abertos
           </Typography>
         </Toolbar>
       </AppBar>
@@ -118,12 +146,12 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'Deputados', 'Sobre', 'Contato'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+          {menuItems.map(item =>(
+            <ListItem
+              key={item.text}
+            >
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.text} />
             </ListItem>
           ))}
         </List>
@@ -136,7 +164,10 @@ export default function PersistentDrawerLeft() {
         </Typography>
         <Typography paragraph>
         Espaço para os conteudo e demais componentes 2.
-        </Typography>        
+        </Typography> 
+        <Box>
+        {children}       
+        </Box> 
       </Main>
     </Box>
   );
