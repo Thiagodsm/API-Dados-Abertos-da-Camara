@@ -15,14 +15,12 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import HomeIcon from '@mui/icons-material/Home';
 import GroupsIcon from '@mui/icons-material/Groups';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import { Card, CardMedia, CardContent, CardActions, Button, Container } from '@mui/material';
-import Groups from '@mui/icons-material/Groups';
+import { useNavigate } from "react-router-dom";
+import { Link } from '@material-ui/core';
 
 
 const drawerWidth = 240;
@@ -75,6 +73,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  //const navigate = useNavigate() // used to redirect the user by the paths
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -93,17 +92,17 @@ export default function PersistentDrawerLeft({ children }) {
     {
       text: 'Deputados',
       icon: <GroupsIcon />,
-      path: '/deputados'
+      path: '/pages/Deputados'
     },
     {
       text: 'Sobre',
       icon: <InfoIcon />,
-      path: '/about'
+      path: '/pages/About'
     },
     {
       text: 'Contato',
       icon: <ContactPageIcon />,
-      path: '/contact'
+      path: '/pages/Contact'
     }
   ]
 
@@ -148,7 +147,10 @@ export default function PersistentDrawerLeft({ children }) {
         <List>
           {menuItems.map(item =>(
             <ListItem
+              button
+              component={Link} to={item.path}
               key={item.text}
+              //onClick={() => navigate.push(item.path)}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
