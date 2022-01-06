@@ -1,6 +1,6 @@
 # Consumindo a API de Dados Abertos da Camara dos Deputados.
 
-- Este projeto tem por objetivo apresentar de forma mais simples e direta como o dinheiro público é gasto pelo deputados em exercício.
+- Este projeto tem por objeto apresentar os informações referentes ao deputados Federais em exercício, os dados utilizados são fornecido pela própria câmara dos Deputados através da API (Dados Abertos) e podem ser consultados através do link https://dadosabertos.camara.leg.br/swagger/api.html.
 
 Link do projeto em desenvolvimento: 
 
