@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/API-de-Dados-Abertos-da-Camara/static/css/main.073c9b0a.css",
+    "main.js": "/API-de-Dados-Abertos-da-Camara/static/js/main.a39219e8.js",
+    "static/js/787.4bb57ef0.chunk.js": "/API-de-Dados-Abertos-da-Camara/static/js/787.4bb57ef0.chunk.js",
+    "index.html": "/API-de-Dados-Abertos-da-Camara/index.html",
+    "main.073c9b0a.css.map": "/API-de-Dados-Abertos-da-Camara/static/css/main.073c9b0a.css.map",
+    "main.a39219e8.js.map": "/API-de-Dados-Abertos-da-Camara/static/js/main.a39219e8.js.map",
+    "787.4bb57ef0.chunk.js.map": "/API-de-Dados-Abertos-da-Camara/static/js/787.4bb57ef0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a39219e8.js"
+  ]
+}
