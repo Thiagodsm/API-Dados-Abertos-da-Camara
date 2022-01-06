@@ -15,7 +15,7 @@ const columns = [
 
 function DataTable() {
 
-    const [tableData, setTableData] = useState({dados: [], links: []}, 5)
+    const [tableData, setTableData] = useState({dados: [], links: []})
 
     //userEffect(async () => await api.getDeputado());
     useEffect(() => {
