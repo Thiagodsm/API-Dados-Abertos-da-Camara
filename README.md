@@ -2,7 +2,7 @@
 
 - Este projeto tem por objetivo apresentar de forma mais simples e direta como o dinheiro público é gasto pelo deputados em exercício.
 
-Link do projeto em desenvolvimento: https://thiagodsm.github.io/API-de-Dados-Abertos-da-Camara/
+Link do projeto em desenvolvimento: 
 
 ## Scripts disponíveis
 
