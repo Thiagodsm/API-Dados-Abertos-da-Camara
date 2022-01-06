@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { DataGrid } from '@material-ui/data-grid'
 import api from '../api/APIUtils';
-import { width } from '@mui/system';
 
 const columns = [
     {field: 'id', headerName: 'ID'},
