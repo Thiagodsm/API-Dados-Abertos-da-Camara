@@ -19,8 +19,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import GroupsIcon from '@mui/icons-material/Groups';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
-import { useNavigate } from "react-router-dom";
-import { Link } from '@material-ui/core';
+import { Link } from "react-router-dom";
+
 
 
 const drawerWidth = 240;
@@ -73,6 +73,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  //const location = useLocation()
   //const navigate = useNavigate() // used to redirect the user by the paths
 
   const handleDrawerOpen = () => {
@@ -92,17 +93,17 @@ export default function PersistentDrawerLeft({ children }) {
     {
       text: 'Deputados',
       icon: <GroupsIcon />,
-      path: '/pages/Deputados'
+      path: 'pages/deputados'
     },
     {
       text: 'Sobre',
       icon: <InfoIcon />,
-      path: '/pages/About'
+      path: '/pages/about'
     },
     {
       text: 'Contato',
       icon: <ContactPageIcon />,
-      path: '/pages/Contact'
+      path: '/pages/contact'
     }
   ]
 
@@ -121,12 +122,15 @@ export default function PersistentDrawerLeft({ children }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            API Dados Abertos
+          Dados Abertos da Camara
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
         sx={{
+          active: {
+            background: '#f4f4f4'
+          },
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
@@ -148,10 +152,9 @@ export default function PersistentDrawerLeft({ children }) {
           {menuItems.map(item =>(
             <ListItem
               button
-              component={Link} to={item.path}
               key={item.text}
-              //onClick={() => navigate.push(item.path)}
-            >
+              component={Link} to={item.path}
+              >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
@@ -161,12 +164,12 @@ export default function PersistentDrawerLeft({ children }) {
       </Drawer>
       <Main open={open}>
       <DrawerHeader />
-        <Typography paragraph>
-          Espaço para os conteudo e demais componentes 1.
+        {/* <Typography paragraph>
+          Espaço para os conteudos e demais componentes 1.
         </Typography>
         <Typography paragraph>
-        Espaço para os conteudo e demais componentes 2.
-        </Typography> 
+        Espaço para os conteudos e demais componentes 2.
+        </Typography>  */}
         <Box>
         {children}       
         </Box> 

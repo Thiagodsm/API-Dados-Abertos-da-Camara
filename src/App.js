@@ -1,27 +1,73 @@
+import { Component } from 'react';
 import './App.css';
 import React from "react";
-import { Button } from '@material-ui/core';
-import Stack from '@mui/material/Stack';
+//import Stack from '@mui/material/Stack';
 import PersistentDrawerLeft from './components/PersistentDrawerLeft';
 
-function App() {
-  return (
-    <PersistentDrawerLeft >
-      <Stack direction="row" spacing={2}>
-      <Button variant="contained">Contained</Button>
-      <Button variant="contained" disabled>
-        Disabled
-      </Button>
-      <Button variant="contained" href="#contained-buttons">
-        Link
-      </Button>
-    </Stack>
+/*-- components --*/
+import Footer from './components/Footer';
+/*-- components --*/
 
-    </PersistentDrawerLeft>
-    
-  );
+/*-- pages --*/
+import Pages from './pages/index';
+/*-- pages --*/
+
+/*-- APIUtils --*/
+import api from './api/APIUtils';
+/*-- APIUtils --*/
+
+class App extends Component{
+
+  state ={
+    data: [],
+  }
+
+  async componentDidMount(){
+    const response = await api.getDeputados()
+
+    //console.log(response.data);
+    this.setState({data: response.data});
+  }
+
+  render(){
+    return (    
+      <div className='App'>
+        <PersistentDrawerLeft >
+        {/*<Stack direction="row" spacing={2}> </Stack>*/}
+        <Pages/>
+      </PersistentDrawerLeft>
+      <Footer/>
+      </div>
+    )
+  }
 }
+
+// using function 
+/*function App() {
+  return (    
+    <div className='App'>
+        <NavBar />
+        <Pages />
+        <Footer />
+    </div>
+  );
+}*/
+
 export default App;
+
+
+
+//function App() {
+  //return (
+    //  <PersistentDrawerLeft >
+        //{/*<Stack direction="row" spacing={2}> </Stack>*/}
+      //  <Pages/>
+      //</PersistentDrawerLeft>
+    
+    
+  //);
+//}
+//export default App;
 
 /*
 function App() {

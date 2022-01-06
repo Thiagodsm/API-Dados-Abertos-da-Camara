@@ -4,8 +4,8 @@ export default function Footer() {
     return (
     <AppBar position="static" color="primary">
         <Toolbar>
-            <Typography variant="body1" color="inherit">
-            © 2019 Thiago
+            <Typography variant="body1" color="inherit" align="center">
+            &copy; {new Date().getFullYear()} - TSM Consultoria
             </Typography>
         </Toolbar>
     </AppBar>
