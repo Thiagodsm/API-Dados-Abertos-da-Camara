@@ -15,6 +15,7 @@ const columns = [
 function DataTable() {
 
     const [tableData, setTableData] = useState({dados: [], links: []})
+    const [rowsPerPage, setRowsPerPage] = useState(10);
 
     //userEffect(async () => await api.getDeputado());
     useEffect(() => {
@@ -30,14 +31,15 @@ function DataTable() {
     return (
         <div style={{height: 700, width: '100%'}}>
             <DataGrid
-                pageSize={10}
-                onPageSizeChange={(newPageSize) => setTableData(newPageSize)}
-                rowsPerPageOptions={[]}
+                pageSize={rowsPerPage}
+                onPageSizeChange={(newPageSize) => setRowsPerPage(newPageSize)}
+                rowsPerPageOptions={[5,10,20
+                ]}
                 pagination
                 {...tableData.dados}
                 rows={tableData.dados}
                 columns={columns}
-                checkboxSlection
+                checkboxSelection
             ></DataGrid>    
         </div>
     )
