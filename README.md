@@ -2,7 +2,7 @@
 
 - Este projeto tem por objeto apresentar os informações referentes ao deputados Federais em exercício, os dados utilizados são fornecido pela própria câmara dos Deputados através da API (Dados Abertos) e podem ser consultados através do link https://dadosabertos.camara.leg.br/swagger/api.html.
 
-Link do projeto em desenvolvimento: 
+Link do projeto em desenvolvimento: https://thiagodsm.github.io/API-Dados-Abertos-da-Camara/
 
 ## Scripts disponíveis
 
