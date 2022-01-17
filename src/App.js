@@ -33,10 +33,9 @@ class App extends Component{
     return (    
       <div className='App'>
         <PersistentDrawerLeft >
-        {/*<Stack direction="row" spacing={2}> </Stack>*/}
-        <Pages/>
-      </PersistentDrawerLeft>
-      <Footer/>
+          <Pages/>
+        </PersistentDrawerLeft>
+        <Footer/>
       </div>
     )
   }

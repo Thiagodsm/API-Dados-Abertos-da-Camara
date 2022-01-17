@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { DataGrid } from '@material-ui/data-grid'
-import api from '../api/APIUtils';
+import apiDadosAbertos from '../api/APIUtils';
 
 const columns = [
     {field: 'id', headerName: 'ID'},
@@ -19,7 +19,7 @@ function DataTable() {
 
     //userEffect(async () => await api.getDeputado());
     useEffect(() => {
-        api.getDeputados().then((response) => {
+        apiDadosAbertos.getDeputados().then((response) => {
             //console.log(response.data.dados)
             //console.log(response.data.links)
             setTableData(response.data);
