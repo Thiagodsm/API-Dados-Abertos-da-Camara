@@ -36,11 +36,11 @@ class APIUtils extends Component{
     // Endpoints from Newsapi
     getNews(){
         console.log("print: " + process.env.REACT_APP_API_KEY);
-        var d = new Date();
+        var d = new Date(Date.now() - 2*864e5); // get minus two days
         return apiNews.get('/everything', {
             params: {
                 q : "Politica", 
-                from: d.getFullYear()+'-'+d.getMonth()+1+'-'+d.getDate()-1,//new Date().toISOString().split('T')[0].toString(),
+                from: d.getFullYear()+'-'+d.getMonth()+1+'-'+d.getDate(),//new Date().toISOString().split('T')[0].toString(),
                 language: "pt",
                 sortBy: "popularity",
                 apiKey: process.env.REACT_APP_API_KEY}
