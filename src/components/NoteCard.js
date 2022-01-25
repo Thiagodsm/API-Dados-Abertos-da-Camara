@@ -40,7 +40,7 @@ export default function NoteCard({ article }) {
           </IconButton>
         }
         title={article.title}
-        subheader={article.publishedAt}
+        subheader={new Date(article.publishedAt).toUTCString()}
       />
       <CardMedia
         component="img"
