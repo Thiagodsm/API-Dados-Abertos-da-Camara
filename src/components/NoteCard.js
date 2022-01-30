@@ -45,7 +45,7 @@ export default function NoteCard({ article }) {
       <CardMedia
         component="img"
         height="194"
-        image={article.urlToImage === null ? require('../img/a.jpg') : article.urlToImage }
+        image={article.urlToImage === null ? require('../img/news-default-image.jpg') : article.urlToImage }
         alt="Paella dish"
       />
       <CardContent>
