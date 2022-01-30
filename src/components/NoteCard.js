@@ -34,7 +34,7 @@ export default function NoteCard({ article }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-      <Button size="small">Saiba mais</Button>
+      <Button size="small" href={article.url} target="_blank">Saiba mais</Button>
       </CardActions>
     </Card>
   );
