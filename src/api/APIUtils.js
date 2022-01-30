@@ -43,6 +43,7 @@ class APIUtils extends Component{
                 from: d.getFullYear()+'-'+d.getMonth()+1+'-'+d.getDate(),//new Date().toISOString().split('T')[0].toString(),
                 language: "pt",
                 sortBy: "popularity",
+                excludeDomains: "hardware.com.br",
                 apiKey: process.env.REACT_APP_API_KEY}
             }
         );
