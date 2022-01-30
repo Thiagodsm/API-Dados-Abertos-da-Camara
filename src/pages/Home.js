@@ -18,6 +18,7 @@ import Note from '../components/NoteCard';
   
     return (
         <Container>
+            <h1>Home</h1>
             <Grid container spacing={3}>
                 {cardData.articles.map((article, index) => (
                     <Grid item key={index} xs={12} md={6} lg={4}>
