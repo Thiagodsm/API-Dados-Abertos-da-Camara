@@ -73,6 +73,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function PersistentDrawerLeft({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  
   //const location = useLocation()
   //const navigate = useNavigate() // used to redirect the user by the paths
 

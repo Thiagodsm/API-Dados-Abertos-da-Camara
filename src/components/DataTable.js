@@ -29,12 +29,11 @@ function DataTable() {
 
 
     return (
-        <div style={{height: 700, width: '100%'}}>
+        <div style={{height: 400, width: '100%'}}>
             <DataGrid
                 pageSize={rowsPerPage}
                 onPageSizeChange={(newPageSize) => setRowsPerPage(newPageSize)}
-                rowsPerPageOptions={[5,10,20
-                ]}
+                rowsPerPageOptions={[5,10,20]}
                 pagination
                 {...tableData.dados}
                 rows={tableData.dados}
