@@ -92,6 +92,11 @@ export default function PersistentDrawerLeft({ children }) {
       path: '/'
     },
     {
+      text: 'Noticias',
+      icon: <ContactPageIcon/>,
+      path: '/pages/news'
+    },
+    {
       text: 'Deputados',
       icon: <GroupsIcon />,
       path: 'pages/deputados'
