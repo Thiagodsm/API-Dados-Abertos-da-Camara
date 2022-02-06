@@ -40,7 +40,7 @@ class APIUtils extends Component{
         return apiNews.get('/everything', {
             params: {
                 q : "Politica", 
-                from: d.getFullYear()+'-'+d.getMonth()+1+'-'+d.getDate(),//new Date().toISOString().split('T')[0].toString(),
+                from: d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate(),//new Date().toISOString().split('T')[0].toString(),
                 language: "pt",
                 sortBy: "popularity",
                 excludeDomains: "hardware.com.br",

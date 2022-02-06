@@ -3,7 +3,6 @@ import { DataGrid } from '@material-ui/data-grid'
 import apiDadosAbertos from '../api/APIUtils';
 
 const columns = [
-    {/*field: 'id', headerName: 'ID'*/},
     {field: 'nome', headerName: 'Nome', width: 300},
     {field: 'siglaPartido', headerName:'Sigla Partido', width: 200},
     {field: 'siglaUf', headerName:'Sigla UF', width: 150},

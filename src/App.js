@@ -35,7 +35,9 @@ class App extends Component{
         <PersistentDrawerLeft >
           <Pages/>
         </PersistentDrawerLeft>
-        <Footer/>
+        <footer className='footer'>
+          <Footer/>
+        </footer>
       </div>
     )
   }
