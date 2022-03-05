@@ -9,7 +9,7 @@ import Note from '../components/NoteCard';
     const[cardData, setCardData] = useState({articles: []});
 
     useEffect(() => {
-        apiNews.getNews().then((response) =>{
+        apiNews.getNewsEverything().then((response) =>{
             setCardData(response.data);
             console.log(response.data);
         });
@@ -18,7 +18,7 @@ import Note from '../components/NoteCard';
   
     return (
         <Container>
-            <h1>Notícias sobre Politica Brasil</h1>
+            <h1>Notícias sobre Politica no Brasil</h1>
             <Grid container spacing={3}>
                 {cardData.articles.map((article, index) => (
                     <Grid item key={index} xs={12} md={6} lg={4}>

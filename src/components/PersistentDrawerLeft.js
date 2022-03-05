@@ -19,6 +19,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import GroupsIcon from '@mui/icons-material/Groups';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
+import ArticleIcon from '@mui/icons-material/Article';
 import { Link } from "react-router-dom";
 
 
@@ -93,7 +94,7 @@ export default function PersistentDrawerLeft({ children }) {
     },
     {
       text: 'Noticias',
-      icon: <ContactPageIcon/>,
+      icon: <ArticleIcon/>,
       path: '/pages/news'
     },
     {
