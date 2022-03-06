@@ -44,7 +44,7 @@ class APIUtils extends Component{
                 language: "pt",
                 sortBy: "popularity",
                 excludeDomains: "hardware.com.br",
-                apiKey: process.env.REACT_APP_API_KEY}
+                apiKey: "c6e1b922e2c84b639f080aea2a7afbb7" /*process.env.REACT_APP_API_KEY*/}
             }
         );
     }
