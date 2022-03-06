@@ -48,6 +48,16 @@ class APIUtils extends Component{
             }
         );
     }
+
+    getNewsTopHeadlines(){
+        return apiNews.get('/top-headlines',{
+            params:{
+                country: 'br',
+                q: 'Politica',
+                apiKey: process.env.REACT_APP_API_KEY
+            }
+        });
+    }
 }
 
 export default new APIUtils();

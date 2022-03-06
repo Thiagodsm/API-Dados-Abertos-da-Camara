@@ -8,10 +8,18 @@ import Note from '../components/NoteCard';
   const News = () => {
     const[cardData, setCardData] = useState({articles: []});
 
+
+
     useEffect(() => {
         apiNews.getNewsEverything().then((response) =>{
             setCardData(response.data);
             console.log(response.data);
+            console.log(response.data.articles);
+            console.log(response.data.articles.filter((value, index, self) =>
+                index === self.findIndex((t) => (
+                    t.title === value.title
+                ))
+            ));
         });
     }, []);
 
@@ -20,11 +28,12 @@ import Note from '../components/NoteCard';
         <Container>
             <h1>Notícias sobre Politica no Brasil</h1>
             <Grid container spacing={3}>
-                {cardData.articles.map((article, index) => (
-                    <Grid item key={index} xs={12} md={6} lg={4}>
-                        <Note article={article} />
-                    </Grid>
-                ))}
+            {cardData.articles.filter((value, index, self) => index === self.findIndex((t) => (t.title === value.title))).map((article, index) => (
+                <Grid item key={index} xs={12} md={6} lg={4}>
+                    <Note article={article} />
+                </Grid>
+            ))}
+
             </Grid>
         </Container>
     )
