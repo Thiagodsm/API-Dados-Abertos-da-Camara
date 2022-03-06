@@ -4,7 +4,7 @@ import Container from '@material-ui/core/Container';
   const Home = () => {
     return (
         <Container>
-            <h1>Home</h1>
+            <h1>Pagina Incial</h1>
         </Container>
     )
   };
