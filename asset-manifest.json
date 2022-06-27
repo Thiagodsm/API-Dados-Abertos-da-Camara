@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/API-Dados-Abertos-da-Camara/static/css/main.e6c13ad2.css",
-    "main.js": "/API-Dados-Abertos-da-Camara/static/js/main.4b7074f1.js",
+    "main.js": "/API-Dados-Abertos-da-Camara/static/js/main.90e2dd0f.js",
     "static/js/787.4bb57ef0.chunk.js": "/API-Dados-Abertos-da-Camara/static/js/787.4bb57ef0.chunk.js",
     "static/media/news-default-image.jpg": "/API-Dados-Abertos-da-Camara/static/media/news-default-image.a43e7419a25b1c5cc56c.jpg",
     "index.html": "/API-Dados-Abertos-da-Camara/index.html",
-    "main.e6c13ad2.css.map": "/API-Dados-Abertos-da-Camara/static/css/main.e6c13ad2.css.map",
-    "main.4b7074f1.js.map": "/API-Dados-Abertos-da-Camara/static/js/main.4b7074f1.js.map",
+    "main.90e2dd0f.js.map": "/API-Dados-Abertos-da-Camara/static/js/main.90e2dd0f.js.map",
     "787.4bb57ef0.chunk.js.map": "/API-Dados-Abertos-da-Camara/static/js/787.4bb57ef0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.4b7074f1.js"
+    "static/js/main.90e2dd0f.js"
   ]
 }
