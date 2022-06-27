@@ -11,6 +11,15 @@ const apiNews = axios.create({
     headers: {"Content-type": "application/json"}
 })
 
+const apiNewscatcher = axios.create({
+    baseURL:'https://newscatcher.p.rapidapi.com/v1/',
+    headers:{
+        "Content-type": "application/json",
+        'X-RapidAPI-Key': '2c1074a84cmsh440b79e4532d9e1p1bb0cejsn46189e8a2b0b',
+        'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
+    }
+})
+
 class APIUtils extends Component{
     
     getDeputados(){
@@ -57,6 +66,19 @@ class APIUtils extends Component{
                 apiKey: process.env.REACT_APP_API_KEY
             }
         });
+    }
+
+    getNewsFromNewscatcherAPI(){
+        return apiNewscatcher.get('/search_free',{
+            params:{
+                q: 'Governo',
+                lang: 'pt',
+                ranked_only: 'True',
+                page: '1',
+                page_size: '20',
+                media: 'True'
+            }
+        })
     }
 }
 

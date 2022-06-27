@@ -1,5 +1,5 @@
-import React from 'react'
-import DataTable from '../components/DataTable'
+import React from 'react';
+import DataTable from '../components/DataTable';
 
 function Deputados() {
     return (

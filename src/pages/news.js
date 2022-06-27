@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import apiNews from '../api/APIUtils';
+import apiNewscatcher from '../api/APIUtils';
 
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -10,8 +11,21 @@ import Note from '../components/NoteCard';
 
 
 
-    useEffect(() => {
+    /*useEffect(() => {
         apiNews.getNewsEverything().then((response) =>{
+            setCardData(response.data);
+            console.log(response.data);
+            console.log(response.data.articles);
+            console.log(response.data.articles.filter((value, index, self) =>
+                index === self.findIndex((t) => (
+                    t.title === value.title
+                ))
+            ));
+        });
+    }, []);*/
+
+    useEffect(() => {
+        apiNewscatcher.getNewsFromNewscatcherAPI().then((response) =>{
             setCardData(response.data);
             console.log(response.data);
             console.log(response.data.articles);
@@ -33,7 +47,6 @@ import Note from '../components/NoteCard';
                     <Note article={article} />
                 </Grid>
             ))}
-
             </Grid>
         </Container>
     )

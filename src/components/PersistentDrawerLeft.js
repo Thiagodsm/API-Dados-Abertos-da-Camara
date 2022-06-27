@@ -158,6 +158,7 @@ export default function PersistentDrawerLeft({ children }) {
         <List>
           {menuItems.map(item =>(
             <ListItem
+            style={{"height": "48px", "padding": "8px 16px"  }}
               button
               key={item.text}
               component={Link} to={item.path}
