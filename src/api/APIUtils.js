@@ -73,6 +73,7 @@ class APIUtils extends Component{
             params:{
                 q: 'Governo',
                 lang: 'pt',
+                sort_by:'date',
                 ranked_only: 'True',
                 page: '1',
                 page_size: '20',

@@ -13,7 +13,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 export default function NoteCard({ article }) {
 
   return (
-    <Card sx={{ maxWidth: 345 }} elevation={5}>
+    <Card style={{display:"block",textAlign: 'left' }} sx={{ maxWidth: 345 }} elevation={5}>
       <CardHeader sx={{maxHeight: 250}}
         action={
           <IconButton aria-label="settings">
